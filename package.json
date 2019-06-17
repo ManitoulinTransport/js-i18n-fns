@@ -1,0 +1,38 @@
+{
+  "name": "js-i18n-fns",
+  "version": "1.0.0",
+  "description": "Gettext-like system for static string translation in Vue",
+  "main": "lib/functions.js",
+  "bin": {
+    "js-i18n-fns-translate": "scripts/translate.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ManitoulinTransport/js-i18n-fns.git"
+  },
+  "keywords": [
+    "vue",
+    "i18n",
+    "gettext",
+    "translate",
+    "translations",
+    "l8n",
+    "localization",
+    "internationalization"
+  ],
+  "author": "Matthew Francis Brunetti",
+  "bugs": {
+    "url": "https://github.com/ManitoulinTransport/js-i18n-fns/issues"
+  },
+  "homepage": "https://github.com/ManitoulinTransport/js-i18n-fns#readme",
+  "dependencies": {
+    "@babel/parser": "^7.4.5",
+    "@babel/traverse": "^7.4.5",
+    "@vitalets/google-translate-api": "^2.8.0",
+    "flatstream": "^1.0.0",
+    "lodash.debounce": "^4.0.8"
+  }
+}
