@@ -4,7 +4,7 @@ const {relative, join} = require('path')
 const {promisify} = require('util')
 const fs = require('fs')
 const translate = require('@vitalets/google-translate-api')
-const config = require('../lib/config')
+const {config} = require('../lib/config')
 
 const [readFile, writeFile, exists] = [fs.readFile, fs.writeFile, fs.exists].map(promisify)
 
