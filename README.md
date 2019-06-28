@@ -38,6 +38,7 @@ Create a `js-i18n-fns.config.js` file like this in the root of your project
 
 ```js
 module.exports = {
+  shouldExtract: true,
   extractedMessagesFile: 'extracted-messages.json',
   functionIdentifier: '$t',
   throwIfInvalidUsage: true,
