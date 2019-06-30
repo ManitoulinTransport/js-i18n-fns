@@ -29,7 +29,7 @@ Similar to [vue-gettext](https://github.com/Polyconseil/vue-gettext) except:
 Replace the version number with that of the most recent release and execute:
 
 ```
-yarn add --dev https://github.com/ManitoulinTransport/js-i18n-fns/tarball/v1.0.0 transform-loader cross-env
+yarn add --dev https://github.com/ManitoulinTransport/js-i18n-fns/tarball/v1.0.0 transform-loader
 ```
 
 ### 2. Create js-i18n-fns config file
@@ -48,9 +48,7 @@ module.exports = {
 }
 ```
 
-### 4. Set up transform for message extraction
-
-#### Transform /w Webpack
+### 3. Set up transform for message extraction
 
 Add this to your webpack configuration in the `module.rules` array
 
@@ -61,17 +59,6 @@ Add this to your webpack configuration in the `module.rules` array
   loader: 'transform-loader?js-i18n-fns/transform',
   exclude: /(node_modules)/
 }
-```
-
-#### /w Browserify
-
-```
-  const browserify = require('browserify');
-  const fs = require('fs');
-  browserify('input.js')
-  	.transform('js-i18n-fns/create-transform', {/* options */})
-  	.bundle()
-  	.pipe(fs.createWriteStream('output.js'));
 ```
 
 ### 4. Add package script for translation task

@@ -29,8 +29,10 @@
   },
   "homepage": "https://github.com/ManitoulinTransport/js-i18n-fns#readme",
   "dependencies": {
+    "@babel/generator": "^7.4.4",
     "@babel/parser": "^7.4.5",
     "@babel/traverse": "^7.4.5",
+    "@babel/types": "^7.4.4",
     "@vitalets/google-translate-api": "^2.8.0",
     "flatstream": "^1.0.0",
     "lodash.debounce": "^4.0.8"
