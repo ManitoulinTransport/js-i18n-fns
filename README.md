@@ -4,10 +4,9 @@
 
 High-level usage:
 
-1. Install
-2. Wrap message strings in calls to translation function(s)
-3. Extract messages from code
-4. Translate messages into other languages
+1. Wrap message strings in calls to translation function(s)
+2. Extract messages from code
+3. Translate messages into other languages
 
 Created to be a gettext-like solution that works for Vue, but should work fine with other frontend frameworks.
 
@@ -41,14 +40,13 @@ module.exports = {
   shouldExtract: true,
   extractedMessagesFile: 'extracted-messages.json',
   functionIdentifier: '$t',
-  throwIfInvalidUsage: true,
   localesDir: 'src/i18n/locales',
   nativeLocale: 'en',
   targetLocales: ['fr', 'es']
 }
 ```
 
-### 3. Set up transform for message extraction
+### 3. Set up transform for message extraction & translation inlining
 
 Add this to your webpack configuration in the `module.rules` array
 
