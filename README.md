@@ -18,7 +18,7 @@ Similar to [vue-gettext](https://github.com/Polyconseil/vue-gettext) except:
 
 - portable (all js, no system dependencies)
 - more reliable at parsing each file because it uses a real js parser
-- simpler (no directive, no component, just a few functions)
+- simpler (no directive, no component, just one simple function which you define)
 - good solution for non-vue applications
 
 ## Installing
@@ -59,10 +59,36 @@ Add this to your webpack configuration in the `module.rules` array
 }
 ```
 
-### 4. Add package script for translation task
+**Note: It is recommended to disable this for active development, since (1) it slows down the build significantly, and (2) you will lose source-map support**
+
+### 4. Define translation function
+
+A basic example that you can expand on:
+
+```js
+let currentLocale = 'en'
+
+export function setLocale (newLocale) {
+    currentLocale = newLocal
+}
+
+export function $t (message) {
+  return message
+}
+
+$t.getMessage = (originalMessage, translatedMessages) => {
+  return translatedMessages.hasOwnProperty(currentLanguage) ? translatedMessages[currentLanguage] : originalMessage
+}
+```
+
+The result of `$t.getMessage` will be passed as the first argument to `$t`.
+
+### 5. Add package script for translation task
 
 Add the following to the "scripts" in your package.json:
 
 ```
 "i18n-translate": "js-i18n-fns-translate"
 ```
+
+Run this to automatically translate every message in `extractedMessagesFile` into every language in `targetLocales` and save into files in `localesDir`

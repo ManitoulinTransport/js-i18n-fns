@@ -1,10 +1,8 @@
 # TODO
 
-- provide actual i18n functions, basic & vue-reactive
+- improve README documentation
 - ability to use context, i.e. `$tc(context, message)`
 - provide `js-i18n-fns-prune` script
-- !!! Inline translations in the transform !!!
-- finish readme steps
 - publish
 
 ## Maybe
